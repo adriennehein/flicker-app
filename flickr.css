@@ -1,0 +1,33 @@
+.photo-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.photo {
+  padding: 10px;
+  height: 300px;
+  width: 400px;
+}
+
+.label {
+  display: none;
+}
+
+.image {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+}
+
+.image:hover
+  > .label {
+    display: block;
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.3);
+}

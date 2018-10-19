@@ -1,8 +1,8 @@
 $(document).ready(function(){
-  $('form').submit(function(e) {
-    e.preventDefault();
+  $('form').submit(e => {
+    e.preventDefault(); //prevent page reload
     const flickerAPI = "https://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
-    const filter = $('#filter').val();
+    const filter = $('#filter').val(); //set search query
     const flickerOptions = {
       tags: filter,
       format: "json"
@@ -17,12 +17,12 @@ $(document).ready(function(){
             <div class="label">${photo.title}</div>
             </div>
           </a>
-        </div>`
+        </div>`;
       })
-      photoGrid += '</div>'
-      $('#photos').html(photoGrid)
+      photoGrid += '</div>';
+      $('#photos').html(photoGrid);
     }
-    $.getJSON(flickerAPI, flickerOptions, displayPhotos)
+    $.getJSON(flickerAPI, flickerOptions, displayPhotos);
   });
 
 

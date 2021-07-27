@@ -25,5 +25,16 @@ $(document).ready(function(){
     $.getJSON(flickerAPI, flickerOptions, displayPhotos);
   });
 
+  // Complete the oddNumbers function below.
+function oddNumbers(l, r) {
+    const brray = [];
+    for (let i = l; i <= r; i++) {
+      if (i%2 === 1) {
+        brray.push(i)
+        console.log(brray);
+      }
+    }
+}
+
 
 });
